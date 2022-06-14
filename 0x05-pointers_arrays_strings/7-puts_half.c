@@ -1,4 +1,4 @@
-#include "main.h"
+#include "holberton.h"
 
 /**
  * _strlen - returns the length of a string
@@ -32,5 +32,13 @@ void puts_half(char *str)
 	/* find the index to start depending on even/odd amount of strlen */
 	if (len % 2 != 0)
 		idx = (len / 2) + 1;
+	else
+		idx = (len / 2);
 
-
+	while (idx < len)
+	{
+		_putchar(*(str + idx));
+		idx++;
+	}
+	_putchar('\n');
+}
