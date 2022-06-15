@@ -1,17 +1,25 @@
 #include "main.h"
 
 /**
- * print_last_digit - print last digit of integer
- * @n: integer argument
- * Return: last digit of number
+ * print_diagonal - print character "\" n times
+ * @n: number of characters to draw
  */
 
-int print_last_digit(int n)
+void print_diagonal(int n)
 {
-	if (n < 0)
-		n *= -1;
+	int draw;
+	int space;
 
-       	_putchar('0' + (n % 10));
-
-	return (n % 10);
+	if (n > 0)
+	{
+		for (draw = 1; draw <= n; draw++)
+		{
+			for (space = 1; space < draw; space++)
+				_putchar(' ');
+			_putchar('\\');
+			_putchar('\n');
+		}
+	}
+	else
+		_putchar('\n');
 }
