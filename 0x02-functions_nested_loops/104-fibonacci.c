@@ -1,4 +1,4 @@
-#include <main.h>
+#include <stdio.h>
 
 /**
  * main - print first 98 Fibonacci numbers without using long long, malloc,
@@ -47,4 +47,4 @@ int main(void)
 	printf("\n");
 
 	return (0);
-}I
+}
